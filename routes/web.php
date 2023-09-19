@@ -19,7 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware('auth')->group(function() {
+Route::middleware('auth')
+->name('admin.')
+->prefix('admin')
+->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 });
 
