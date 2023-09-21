@@ -18,8 +18,8 @@ class ProjectSeeder extends Seeder
             Project::create([
                 'title'=>fake()->sentence(3),
                 'description'=>fake()->paragraph(),
-                'start_date'=>fake()->dateTimeBetween('-1 month', 'now'),
-                'end_date'=>fake()->dateTimeBetween('start_date', 'now'),
+                'start_date'=>fake()->dateTimeBetween('-1 year', 'now'),
+                'end_date'=>fake()->dateTimeBetween('now' , '+1year'),
                 'chief'=>fake()->firstName(),
                 'members'=>fake()->randomDigitNotNull()
 
